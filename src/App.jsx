@@ -8,9 +8,9 @@ const score = [
   {이름:"plo",국어:90,수학:80,영어:90,과학:72},
   {이름:"plk",국어:90,수학:80,영어:90,과학:72},
   {이름:"plj",국어:90,수학:80,영어:90,과학:72},
-  {이름:"pli",국어:90,수학:80,영어:90,과학:72}
+  {이름:"pli",국어:90,수학:80,영어:90,과학:72}  
 ]
-
+/*
 const source = [0, 1, 2, 3]
 tmp = []
 for (let iitem of source){
@@ -18,28 +18,28 @@ for (let iitem of source){
 }
 
 source.map(item => (item*2))
-
-
-
+*/
 function App() {
 
   return (
     <table>
-      <tr>
-        <th>이름</th>
-        <th>국어</th>
-        <th>수학</th>
-        <th>영어</th>
-        <th>과학</th>
+            <tr>
+        {
+          Object.keys(score[0]).map(key=>(
+          <th>{key}</th>
+        ))
+        }
+        
       </tr>
-      {[0,1,2,3].map(idx => 
+
+      {score.map(item => 
        (
        <tr>
-        <td>{score[idx].이름}</td>
-        <td>{score[idx].국어}</td>
-        <td>{score[idx].수학}</td>
-        <td>{score[idx].영어}</td>
-        <td>{score[idx].과학}</td>
+        {
+          Object.values(item).map(
+            value => (<td>{value}</td>)
+          )
+        }
       </tr>
       )
     )
