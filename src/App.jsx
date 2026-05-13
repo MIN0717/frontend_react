@@ -11,6 +11,15 @@ const score = [
   {이름:"pli",국어:90,수학:80,영어:90,과학:72}
 ]
 
+const source = [0, 1, 2, 3]
+tmp = []
+for (let iitem of source){
+  tmp.push(item*2)
+}
+
+source.map(item => (item*2))
+
+
 
 function App() {
 
